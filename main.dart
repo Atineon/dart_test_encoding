@@ -1,7 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
-
-import 'package:charset_converter/charset_converter.dart';
 
 Future<void> main(List<String> args) async {
   var process = await Process.run(
@@ -13,10 +10,7 @@ Future<void> main(List<String> args) async {
       stdoutEncoding: null,
       stderrEncoding: null);
 
-  Uint8List outputBytes = process.stdout as Uint8List;
-  Uint8List errorBytes = process.stderr as Uint8List;
-
-  print("Output: " + await CharsetConverter.decode("windows1252", outputBytes));
-  print("Error: " + await CharsetConverter.decode("windows1252", errorBytes));
-  print("ExitCode: " + process.exitCode.toString());
+  print("Out  : ${process.stdout}");
+  print("Error: ${process.stderr}");
+  print("ExitCode : ${process.exitCode}");
 }
