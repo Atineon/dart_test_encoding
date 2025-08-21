@@ -8,5 +8,5 @@ Future<void> main(List<String> args) async {
 
   print("Output: ${process.stdout.trim()}");
   print("Error: ${process.stderr.trim()}");
-  print("Exitcode: ${process.exitCode}");
+  print("Exit code: ${process.exitCode}");
 }
