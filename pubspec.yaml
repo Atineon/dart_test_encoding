@@ -1,0 +1,7 @@
+name: dart_test_encoding
+description: Tests for Dart encoding issues.
+
+version: 1.0.0
+
+environment:
+  sdk: '^3.4.0'
