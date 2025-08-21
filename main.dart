@@ -10,7 +10,7 @@ Future<void> main(List<String> args) async {
       stdoutEncoding: null,
       stderrEncoding: null);
 
-  print("Out  : ${process.stdout}");
+  print("Output  : ${process.stdout}");
   print("Error: ${process.stderr}");
-  print("ExitCode : ${process.exitCode}");
+  print("Exit code : ${process.exitCode}");
 }
