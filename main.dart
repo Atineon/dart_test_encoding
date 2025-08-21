@@ -1,4 +1,7 @@
 import 'dart:io';
+import 'dart:typed_data';
+
+import 'package:charset_converter/charset_converter.dart';
 
 Future<void> main(List<String> args) async {
   var process = await Process.run(
@@ -10,7 +13,10 @@ Future<void> main(List<String> args) async {
       stdoutEncoding: null,
       stderrEncoding: null);
 
-  print("Output: ${process.stdout.toString()}");
-  print("Error: ${process.stderr.toString()}");
+  var stdout = CharsetConverter.decode("utf-16", process.stdout as Uint8List);
+  var stderr = process.stderr as List<int>;
+
+  print("Output: ${stdout}");
+  print("Error: ${stderr}");
   print("Exit code: ${process.exitCode}");
 }
