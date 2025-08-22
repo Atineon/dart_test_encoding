@@ -10,4 +10,4 @@ Branches:
 - v3: Essai d'encodage en utf16
   - v3.1: Explication de l'erreur sur la branche v3.
 
-Run the main test script in this folder to check for encoding issues.
+Exécutez le script de test principal dans ce dossier pour vérifier les problèmes d'encodage.
